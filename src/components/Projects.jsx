@@ -1,8 +1,8 @@
 import { projects } from "../data/projects";
 
-export default function Projects() {
+export default function Projects({sectionRefs}) {
   return (
-    <section id="projects" className="px-[5vw] py-28 border-t border-white/5">
+    <section id="projects" ref={(el) => (sectionRefs.current["projects"] = el)} className="px-[5vw] py-28 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

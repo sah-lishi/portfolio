@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Hero() {
+export default function Hero({sectionRefs}) {
     const [visible, setVisible] = useState(false)
-    let useReff = useRef({})
+
     useEffect(() => {
         const t = setTimeout(() => setVisible(true), 100)
         return () => clearTimeout(t)
@@ -36,12 +36,12 @@ export default function Hero() {
                 with clean architecture, JWT auth, and Swagger documentation.
             </p>
             {/* CTAs */}
-            <div ref={useReff} className={`flex gap-4 flex-wrap ${fade("delay-500")}`}>
+            <div className={`flex gap-4 flex-wrap ${fade("delay-500")}`}>
                 <a 
                     href="#projects"
                     onClick={(e) => {
                         e.preventDefault()
-                        useReff.current["projects".toLowerCase()]?.scrollIntoView({ behavior: "smooth"})
+                        sectionRefs.current["projects"]?.scrollIntoView({ behavior: "smooth"})
                     }}
                     className="font-mono-custom text-xs tracking-widest uppercase px-6 py-3 bg-[#7fffd4] text-[#0a0a0f] font-medium rounded hover:bg-[#5fd4b0] hover:-translate-y-0.5 transition-all duration-200 shadow-lg shadow-[#7fffd4]/10"
                 >

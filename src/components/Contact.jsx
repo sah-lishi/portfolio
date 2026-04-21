@@ -1,8 +1,8 @@
 import resumePDF from "../assets/resume.pdf";
 
-export default function Contact() {
+export default function Contact({sectionRefs}) {
   return (
-    <section id="contact" className="px-[5vw] py-28 border-t border-white/5">
+    <section id="contact" ref={(el) => (sectionRefs.current["contact"] = el)} className="px-[5vw] py-28 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

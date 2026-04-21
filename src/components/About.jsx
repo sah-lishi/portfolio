@@ -1,6 +1,6 @@
-export default function About() {
+export default function About({sectionRefs}) {
   return (
-    <section id="about" className="px-[5vw] py-28 border-t border-white/5">
+    <section id="about" ref={(el) => (sectionRefs.current["about"] = el)} className="px-[5vw] py-28 border-t border-white/5">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
         {/* Left — Text */}

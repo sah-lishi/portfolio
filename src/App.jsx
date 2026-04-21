@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="bg-[#0a0a0f] min-h-screen">
       <Navbar sectionRefs={sectionRefs} />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Hero sectionRefs={sectionRefs}/>
+      <About sectionRefs={sectionRefs}/>
+      <Skills sectionRefs={sectionRefs}/>
+      <Projects sectionRefs={sectionRefs}/>
+      <Contact sectionRefs={sectionRefs}/>
       <Footer />
     </div>
   )

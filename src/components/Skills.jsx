@@ -17,9 +17,9 @@ const skillGroups = [
   },
 ];
 
-export default function Skills() {
+export default function Skills({sectionRefs}) {
   return (
-    <section id="skills" className="px-[5vw] py-28 border-t border-white/5">
+    <section id="skills" ref={(el) => (sectionRefs.current["skills"] = el)} className="px-[5vw] py-28 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

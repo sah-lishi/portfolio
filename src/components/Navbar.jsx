@@ -20,7 +20,7 @@ export default function Navbar({sectionRefs}) {
         return () => window.removeEventListener("scroll", onScroll)
     }, [])
 
-    const handlenav = (e, id) => {
+    const handleNav = (e, id) => {
         e.preventDefault()
         sectionRefs.current[id.toLowerCase()]?.scrollIntoView({
             behavior: "smooth"
